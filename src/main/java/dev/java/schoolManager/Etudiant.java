@@ -4,25 +4,31 @@ import java.time.LocalDate;
 
 public class Etudiant {
 
+	@Override
+	public String toString() {
+		return "Etudiant [nomComplet=" + nomComplet + ", matricule=" + matricule + ", dateNaissance=" + dateNaissance
+				+ ", sexe=" + sexe + ", faculte=" + faculte + ", solde=" + solde + "]";
+	}
+
 	private String nomComplet;
 	private int matricule;
 	private LocalDate dateNaissance;
 	private char sexe;
 	private Faculte faculte;
+	private double solde;
 	
 	public Etudiant() {
 	}
 
-
-	public Etudiant(String nomComplet, int matricule, LocalDate dateNaissance, char sexe, Faculte faculte) {
+	public Etudiant(String nomComplet, int matricule, LocalDate dateNaissance, char sexe, Faculte faculte,
+			double solde) {
 		this.nomComplet = nomComplet;
 		this.matricule = matricule;
 		this.dateNaissance = dateNaissance;
 		this.sexe = sexe;
 		this.faculte = faculte;
+		this.solde = solde;
 	}
-
-
 
 	public String getNomComplet() {
 		return nomComplet;
@@ -65,5 +71,15 @@ public class Etudiant {
 	public void setFaculte(Faculte faculte) {
 		this.faculte = faculte;
 	}
+
+	public double getSolde() {
+		return solde;
+	}
+
+	public void setSolde(double solde) {
+		this.solde = solde;
+	}
+	
+	
 
 }
